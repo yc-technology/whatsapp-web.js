@@ -787,7 +787,7 @@ class Client extends EventEmitter {
      */
     async logout() {
         await this.pupPage.evaluate(() => {
-            return window.Store.AppState.logout();
+            return window.Store?.AppState?.logout();
         });
         await this.pupBrowser.close();
         
